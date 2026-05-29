@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亚克力小五金外贸买家画像可视化报告</title>
+    <style>
+        :root {
+            --high-end: #D4AF37;   /* 奢华金 */
+            --value: #27AE60;      /* 价值绿 */
+            --emerging: #E67E22;   /* 增长橙 */
+            --professional: #2980B9; /* 专业蓝 */
+            --bg-gray: #F8F9FB;
+            --text-main: #2C3E50;
+        }
+
+        body { font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; background-color: var(--bg-gray); color: var(--text-main); margin: 0; padding: 40px 20px; }
+        .container { max-width: 1200px; margin: auto; }
+
+        /* Header */
+        header { text-align: center; margin-bottom: 50px; border-bottom: 3px solid #EEE; padding-bottom: 20px; }
+        header h1 { font-size: 32px; margin: 0; color: #1A252F; }
+        header p { color: #7F8C8D; font-size: 18px; margin-top: 10px; }
+
+        /* Product Advantages Section */
+        .advantage-bar { display: flex; justify-content: space-around; background: #FFF; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; }
+        .adv-item { text-align: center; flex: 1; border-right: 1px dashed #DDD; }
+        .adv-item:last-child { border-right: none; }
+        .adv-item strong { display: block; font-size: 20px; color: #34495E; }
+        .adv-item span { font-size: 14px; color: #95A5A6; }
+
+        /* Grid Layout for 4 Market Types */
+        .market-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+
+        /* Market Card Style */
+        .card { background: #FFF; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s; position: relative; }
+        .card:hover { transform: translateY(-10px); }
+        .card-header { padding: 20px; color: white; text-align: center; font-size: 22px; font-weight: bold; }
+        
+        /* Specific Card Colors */
+        .card.high-end .card-header { background: linear-gradient(135deg, #D4AF37, #B8860B); }
+        .card.value .card-header { background: linear-gradient(135deg, #27AE60, #1E8449); }
+        .card.emerging .card-header { background: linear-gradient(135deg, #E67E22, #D35400); }
+        .card.professional .card-header { background: linear-gradient(135deg, #2980B9, #1F618D); }
+
+        .card-body { padding: 20px; }
+        
+        /* Market Share Visual */
+        .share-container { margin-bottom: 20px; }
+        .share-label { font-size: 13px; color: #7F8C8D; display: flex; justify-content: space-between; margin-bottom: 5px; }
+        .share-bar-bg { background: #EEE; height: 8px; border-radius: 4px; }
+        .share-bar-fill { height: 100%; border-radius: 4px; }
+
+        /* Section Item Style */
+        .section-title { font-weight: bold; font-size: 15px; margin: 15px 0 8px 0; display: flex; align-items: center; border-left: 4px solid #DDD; padding-left: 8px; }
+        .card.high-end .section-title { border-color: var(--high-end); }
+        .card.value .section-title { border-color: var(--value); }
+        .card.emerging .section-title { border-color: var(--emerging); }
+        .card.professional .section-title { border-color: var(--professional); }
+
+        .content-list { font-size: 14px; line-height: 1.8; color: #5D6D7E; padding-left: 10px; }
+        .tag-box { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+        .tag { font-size: 12px; padding: 3px 10px; border-radius: 20px; background: #F0F3F4; border: 1px solid #D5DBDB; }
+
+        footer { text-align: center; margin-top: 60px; color: #BDC3C7; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>全球亚克力小五金外贸买家画像报告</h1>
+        <p>2024-2025 全球市场趋势与采购行为深度洞察</p>
+    </header>
+
+    <!-- 产品核心优势看板 -->
+    <div class="advantage-bar">
+        <div class="adv-item">
+            <strong>92% 高透光</strong>
+            <span>水晶质感，视觉高级感</span>
+        </div>
+        <div class="adv-item">
+            <strong>轻量化 50%</strong>
+            <span>对比同体积金属/玻璃</span>
+        </div>
+        <div class="adv-item">
+            <strong>低成本替代</strong>
+            <span>更具价格优势的奢华感方案</span>
+        </div>
+        <div class="adv-item">
+            <strong>耐候抗腐蚀</strong>
+            <span>不生锈、不变黄、易加工</span>
+        </div>
+    </div>
+
+    <!-- 市场分类卡片 -->
+    <div class="market-grid">
+        
+        <!-- 高端市场 -->
+        <div class="card high-end">
+            <div class="card-header">高端定制市场</div>
+            <div class="card-body">
+                <div class="share-container">
+                    <div class="share-label"><span>市场份额预估</span><span>20%</span></div>
+                    <div class="share-bar-bg"><div class="share-bar-fill" style="width: 20%; background: var(--high-end);"></div></div>
+                </div>
+                <div class="section-title">重点国家</div>
+                <div class="content-list">美国、英国、阿联酋、德国、北欧</div>
+                <div class="section-title">目标客户类型</div>
+                <div class="content-list">独立设计师、奢饰品陈列商、高端家具商</div>
+                <div class="section-title">核心采购偏好</div>
+                <div class="tag-box">
+                    <span class="tag">GRS再生材料</span>
+                    <span class="tag">钻石抛光</span>
+                    <span class="tag">无损包装</span>
+                </div>
+                <div class="section-title">服务重心</div>
+                <div class="content-list">打样精准度、定制化灵活性、品牌背书</div>
+            </div>
+        </div>
+
+        <!-- 性价比市场 -->
+        <div class="card value">
+            <div class="card-header">大众性价比市场</div>
+            <div class="card-body">
+                <div class="share-container">
+                    <div class="share-label"><span>市场份额预估</span><span>45%</span></div>
+                    <div class="share-bar-bg"><div class="share-bar-fill" style="width: 45%; background: var(--value);"></div></div>
+                </div>
+                <div class="section-title">重点国家</div>
+                <div class="content-list">越南、波兰、墨西哥、土耳其、泰国</div>
+                <div class="section-title">目标客户类型</div>
+                <div class="content-list">大型超市连锁、跨境电商大卖家、配件批发商</div>
+                <div class="section-title">核心采购偏好</div>
+                <div class="tag-box">
+                    <span class="tag">极限成本</span>
+                    <span class="tag">现货供应</span>
+                    <span class="tag">低MOQ</span>
+                </div>
+                <div class="section-title">服务重心</div>
+                <div class="content-list">供应链产能稳定性、物流成本优化、账期支持</div>
+            </div>
+        </div>
+
+        <!-- 新兴增长市场 -->
+        <div class="card emerging">
+            <div class="card-header">新兴增长市场</div>
+            <div class="card-body">
+                <div class="share-container">
+                    <div class="share-label"><span>市场份额预估</span><span>25%</span></div>
+                    <div class="share-bar-bg"><div class="share-bar-fill" style="width: 25%; background: var(--emerging);"></div></div>
+                </div>
+                <div class="section-title">重点国家</div>
+                <div class="content-list">巴西、印尼、印度、尼日利亚</div>
+                <div class="section-title">目标客户类型</div>
+                <div class="content-list">本地家居品牌、网红DTC品牌、酒店承包商</div>
+                <div class="section-title">核心采购偏好</div>
+                <div class="tag-box">
+                    <span class="tag">炫彩设计</span>
+                    <span class="tag">短交付周期</span>
+                    <span class="tag">营销支持</span>
+                </div>
+                <div class="section-title">服务重心</div>
+                <div class="content-list">提供高质图片视频、协助本地品牌化、产品多元化</div>
+            </div>
+        </div>
+
+        <!-- 专业机构市场 -->
+        <div class="card professional">
+            <div class="card-header">专业机构/工业</div>
+            <div class="card-body">
+                <div class="share-container">
+                    <div class="share-label"><span>市场份额预估</span><span>10%</span></div>
+                    <div class="share-bar-bg"><div class="share-bar-fill" style="width: 10%; background: var(--professional);"></div></div>
+                </div>
+                <div class="section-title">重点国家</div>
+                <div class="content-list">日本、韩国、瑞士、新加坡、美国</div>
+                <div class="section-title">目标客户类型</div>
+                <div class="content-list">实验室供应商、医疗设备商、广告工程公司</div>
+                <div class="section-title">核心采购偏好</div>
+                <div class="tag-box">
+                    <span class="tag">SGS/RoHS</span>
+                    <span class="tag">极低公差</span>
+                    <span class="tag">阻燃性</span>
+                </div>
+                <div class="section-title">服务重心</div>
+                <div class="content-list">合规资质证书、技术参数对接、长期稳定供货</div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2024 外贸战略研究小组 | 亚克力小五金买家画像分析数据看板
+    </footer>
+</div>
+
+</body>
+</html>
